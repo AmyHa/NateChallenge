@@ -13,11 +13,13 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     var coordinator: MainCoordinator?
     private var collectionView: UICollectionView!
+    private var countLabel = UILabel()
     private var viewModel = ProductListViewModel()
     private var products = [Product]()
     private var cancellables: Set<AnyCancellable> = []
 
     override func viewDidLoad() {
+        setUpCountLabel()
         setUpCollectionView()
         
         viewModel.$products
@@ -25,6 +27,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
                 self.products = result
                 DispatchQueue.main.async {
                     self.collectionView.reloadData()
+                    self.countLabel.text = "\(self.products.count) Items"
                 }
             })
             .store(in: &cancellables)
@@ -36,9 +39,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as! ProductCollectionViewCell
-        
 
-    
         if products[indexPath.row].images.count > 0 {
             let imageURL = URL(string: products[indexPath.row].images[0])
             cell.imageView.sd_setImage(with: imageURL) { image, error, cacheType, downloadURL in
@@ -66,6 +67,10 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         return CGSize(width:  widthPerItem, height: collectionView.frame.size.height / 2)
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onTapProduct(product: products[indexPath.row])
+    }
+    
     private func setUpCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
@@ -80,15 +85,25 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         collectionView.backgroundColor = .white
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            collectionView.topAnchor.constraint(equalTo: countLabel.bottomAnchor),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        onTapProduct(product: products[indexPath.row])
+    private func setUpCountLabel() {
+        view.addSubview(countLabel)
+        countLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            countLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            countLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            countLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+        ])
+        countLabel.text = "Items"
+        countLabel.textAlignment = .center
+        countLabel.backgroundColor = .white
+        countLabel.textColor = .black
     }
     
     func onTapProduct(product: Product) {
