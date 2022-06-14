@@ -12,7 +12,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     func heightForView(text:String, width:CGFloat) -> CGFloat{
        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
-       label.numberOfLines = 4
+       label.numberOfLines = 2
        label.text = text
        label.sizeToFit()
        return label.frame.height
@@ -33,7 +33,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Product Title"
         label.textAlignment = .center
-        label.numberOfLines = 4
+        label.numberOfLines = 2
         label.textColor = .black
         return label
     }()

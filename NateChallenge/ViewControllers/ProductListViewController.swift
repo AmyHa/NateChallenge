@@ -52,8 +52,8 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         }
         
         cell.imageView.layer.cornerRadius = 20
-        cell.titleLabel.text = products[indexPath.row].title
-        cell.merchantLabel.text = products[indexPath.row].merchant
+        cell.titleLabel.text = products[indexPath.row].title.uppercased()
+        cell.merchantLabel.text = products[indexPath.row].merchant.lowercased()
         return cell
     }
     
