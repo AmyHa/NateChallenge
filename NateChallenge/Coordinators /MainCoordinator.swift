@@ -21,4 +21,10 @@ class MainCoordinator: Coordinator {
         productListViewController.coordinator = self
         navigationController.pushViewController(productListViewController, animated: false)
     }
+    
+    func moveToDetailViewController(of product: Product) {
+        let detailViewController = DetailViewController()
+        navigationController.present(detailViewController, animated: true)
+        
+    }
 }

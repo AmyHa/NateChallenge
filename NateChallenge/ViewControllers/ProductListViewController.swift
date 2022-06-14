@@ -37,14 +37,20 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as! ProductCollectionViewCell
         
-        let image = products[indexPath.row].images.count > 0 ? products[indexPath.row].images[0] : ""
-        let imageURL = URL(string: image)
 
-        cell.imageView.sd_setImage(with: imageURL) { image, error, cacheType, downloadURL in
-            if let error = error {
-                print("Error downloading image: \(error)")
+    
+        if products[indexPath.row].images.count > 0 {
+            let imageURL = URL(string: products[indexPath.row].images[0])
+            cell.imageView.sd_setImage(with: imageURL) { image, error, cacheType, downloadURL in
+                if let error = error {
+                    print("Error downloading image: \(error)")
+                    if let defaultImage = UIImage(named: "imageComingSoon") {
+                        cell.imageView.image = defaultImage
+                    }
+                }
             }
         }
+        
         cell.imageView.layer.cornerRadius = 20
         cell.titleLabel.text = products[indexPath.row].title
         cell.merchantLabel.text = products[indexPath.row].merchant
@@ -79,5 +85,13 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        onTapProduct(product: products[indexPath.row])
+    }
+    
+    func onTapProduct(product: Product) {
+        coordinator?.moveToDetailViewController(of: product)
     }
 }
