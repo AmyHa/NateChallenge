@@ -18,13 +18,14 @@ class ProductCollectionViewCell: UICollectionViewCell {
        return label.frame.height
     }
     
-    let imageView: UIImageView = {
+    var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "house")
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 15
         imageView.backgroundColor = Colours.primaryBackground
+        imageView.image = UIImage(named: "imageComingSoon")
         return imageView
     }()
     
