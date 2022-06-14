@@ -8,7 +8,7 @@ import Combine
 
 class ProductListViewModel {
     var service = NetworkService()
-    @Published private(set) var products: Products?
+    @Published private(set) var products = [Product]()
     
     init() {
         fetchProducts()
@@ -19,7 +19,7 @@ class ProductListViewModel {
             
             switch result {
             case .success(let successValue):
-                self?.products?.products = successValue.products
+                self?.products = successValue.products
                 print("success! \(successValue)")
             case .failure(let failureValue):
                 print("failure! \(failureValue)")

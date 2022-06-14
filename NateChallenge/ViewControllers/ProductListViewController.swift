@@ -6,22 +6,36 @@
 //
 
 import UIKit
+import Combine
 
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     private var collectionView: UICollectionView!
     private var viewModel = ProductListViewModel()
+    private var products = [Product]()
+    private var cancellables: Set<AnyCancellable> = []
 
     override func viewDidLoad() {
         setUpCollectionView()
+        
+        viewModel.$products
+            .sink(receiveValue: { (result) in
+                self.products = result
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            })
+            .store(in: &cancellables)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 4
+        return products.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as! ProductCollectionViewCell
+        cell.titleLabel.text = products[indexPath.row].title
+        cell.merchantLabel.text = products[indexPath.row].merchant
         return cell
     }
     
