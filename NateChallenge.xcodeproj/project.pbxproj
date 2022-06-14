@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51F1E3BC30636B4745F410F0 /* Pods_NateChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC9FE7CA808045633DCB59A /* Pods_NateChallengeTests.framework */; };
 		62943ADF285898DA00531E26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943ADE285898DA00531E26 /* AppDelegate.swift */; };
 		62943AE1285898DA00531E26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943AE0285898DA00531E26 /* SceneDelegate.swift */; };
 		62943AE8285898DF00531E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62943AE7285898DF00531E26 /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 		62943B1F2858EDBA00531E26 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B1E2858EDBA00531E26 /* ProductListViewController.swift */; };
 		62943B222858EFD900531E26 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B212858EFD900531E26 /* ProductCollectionViewCell.swift */; };
 		62943B252858F2FC00531E26 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B242858F2FC00531E26 /* ProductListViewModel.swift */; };
+		71615FE1E5D4446082C70967 /* Pods_NateChallenge_NateChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */; };
+		BD56094AC540B98F6B7B5C06 /* Pods_NateChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0F2A74436FE7C3448E6BEED7 /* Pods-NateChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallenge.release.xcconfig"; path = "Target Support Files/Pods-NateChallenge/Pods-NateChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		2FC9FE7CA808045633DCB59A /* Pods_NateChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		36C8E0EC6A1BB7309EF8FD23 /* Pods-NateChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-NateChallengeTests/Pods-NateChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		5159BFAD7E736F3DB3196635 /* Pods-NateChallenge-NateChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallenge-NateChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-NateChallenge-NateChallengeUITests/Pods-NateChallenge-NateChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5C54DE21D6646A7F054AF230 /* Pods-NateChallenge-NateChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallenge-NateChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-NateChallenge-NateChallengeUITests/Pods-NateChallenge-NateChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		62943ADB285898DA00531E26 /* NateChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62943ADE285898DA00531E26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62943AE0285898DA00531E26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +67,10 @@
 		62943B1E2858EDBA00531E26 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		62943B212858EFD900531E26 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		62943B242858F2FC00531E26 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge_NateChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BA5CEA28E9D88DB79542859 /* Pods-NateChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-NateChallengeTests/Pods-NateChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6EE1B0DE3E2AADD88063AE2 /* Pods-NateChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallenge.debug.xcconfig"; path = "Target Support Files/Pods-NateChallenge/Pods-NateChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD56094AC540B98F6B7B5C06 /* Pods_NateChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51F1E3BC30636B4745F410F0 /* Pods_NateChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,12 +94,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71615FE1E5D4446082C70967 /* Pods_NateChallenge_NateChallengeUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4905A73FBD0A133F3D8CE1F8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */,
+				76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */,
+				2FC9FE7CA808045633DCB59A /* Pods_NateChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58E0AE8C71CD869974E6DEAF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE1B0DE3E2AADD88063AE2 /* Pods-NateChallenge.debug.xcconfig */,
+				0F2A74436FE7C3448E6BEED7 /* Pods-NateChallenge.release.xcconfig */,
+				5C54DE21D6646A7F054AF230 /* Pods-NateChallenge-NateChallengeUITests.debug.xcconfig */,
+				5159BFAD7E736F3DB3196635 /* Pods-NateChallenge-NateChallengeUITests.release.xcconfig */,
+				9BA5CEA28E9D88DB79542859 /* Pods-NateChallengeTests.debug.xcconfig */,
+				36C8E0EC6A1BB7309EF8FD23 /* Pods-NateChallengeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		62943AD2285898DA00531E26 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +132,8 @@
 				62943AF4285898DF00531E26 /* NateChallengeTests */,
 				62943AFE285898DF00531E26 /* NateChallengeUITests */,
 				62943ADC285898DA00531E26 /* Products */,
+				58E0AE8C71CD869974E6DEAF /* Pods */,
+				4905A73FBD0A133F3D8CE1F8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,9 +254,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62943B05285898DF00531E26 /* Build configuration list for PBXNativeTarget "NateChallenge" */;
 			buildPhases = (
+				C80858E4A99398858319C1E5 /* [CP] Check Pods Manifest.lock */,
 				62943AD7285898DA00531E26 /* Sources */,
 				62943AD8285898DA00531E26 /* Frameworks */,
 				62943AD9285898DA00531E26 /* Resources */,
+				7413B1DD55478587E4BA3843 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +273,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62943B08285898DF00531E26 /* Build configuration list for PBXNativeTarget "NateChallengeTests" */;
 			buildPhases = (
+				6764A07CBE6B9319664EEB7F /* [CP] Check Pods Manifest.lock */,
 				62943AED285898DF00531E26 /* Sources */,
 				62943AEE285898DF00531E26 /* Frameworks */,
 				62943AEF285898DF00531E26 /* Resources */,
@@ -248,9 +292,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62943B0B285898DF00531E26 /* Build configuration list for PBXNativeTarget "NateChallengeUITests" */;
 			buildPhases = (
+				6F0B4523226A6B02B31FDA2B /* [CP] Check Pods Manifest.lock */,
 				62943AF7285898DF00531E26 /* Sources */,
 				62943AF8285898DF00531E26 /* Frameworks */,
 				62943AF9285898DF00531E26 /* Resources */,
+				CA96C5A31F68621F0CF31CA8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,6 +376,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6764A07CBE6B9319664EEB7F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NateChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F0B4523226A6B02B31FDA2B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NateChallenge-NateChallengeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7413B1DD55478587E4BA3843 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NateChallenge/Pods-NateChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NateChallenge/Pods-NateChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NateChallenge/Pods-NateChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C80858E4A99398858319C1E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NateChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA96C5A31F68621F0CF31CA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NateChallenge-NateChallengeUITests/Pods-NateChallenge-NateChallengeUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NateChallenge-NateChallengeUITests/Pods-NateChallenge-NateChallengeUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NateChallenge-NateChallengeUITests/Pods-NateChallenge-NateChallengeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		62943AD7285898DA00531E26 /* Sources */ = {
@@ -510,6 +659,7 @@
 		};
 		62943B06285898DF00531E26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F6EE1B0DE3E2AADD88063AE2 /* Pods-NateChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -537,6 +687,7 @@
 		};
 		62943B07285898DF00531E26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F2A74436FE7C3448E6BEED7 /* Pods-NateChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -564,6 +715,7 @@
 		};
 		62943B09285898DF00531E26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BA5CEA28E9D88DB79542859 /* Pods-NateChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -584,6 +736,7 @@
 		};
 		62943B0A285898DF00531E26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36C8E0EC6A1BB7309EF8FD23 /* Pods-NateChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -604,6 +757,7 @@
 		};
 		62943B0C285898DF00531E26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C54DE21D6646A7F054AF230 /* Pods-NateChallenge-NateChallengeUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -622,6 +776,7 @@
 		};
 		62943B0D285898DF00531E26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5159BFAD7E736F3DB3196635 /* Pods-NateChallenge-NateChallengeUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
