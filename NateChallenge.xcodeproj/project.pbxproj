@@ -24,6 +24,8 @@
 		62943B252858F2FC00531E26 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B242858F2FC00531E26 /* ProductListViewModel.swift */; };
 		62943B2828591EDC00531E26 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B2728591EDC00531E26 /* Theme.swift */; };
 		62943B2B28591F5C00531E26 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B2A28591F5C00531E26 /* UIColorExtension.swift */; };
+		62943B2E2859343A00531E26 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B2D2859343A00531E26 /* Coordinator.swift */; };
+		62943B302859345200531E26 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B2F2859345200531E26 /* MainCoordinator.swift */; };
 		71615FE1E5D4446082C70967 /* Pods_NateChallenge_NateChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */; };
 		BD56094AC540B98F6B7B5C06 /* Pods_NateChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,8 @@
 		62943B242858F2FC00531E26 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		62943B2728591EDC00531E26 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		62943B2A28591F5C00531E26 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		62943B2D2859343A00531E26 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		62943B2F2859345200531E26 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge_NateChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA5CEA28E9D88DB79542859 /* Pods-NateChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-NateChallengeTests/Pods-NateChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +244,8 @@
 		62943B202858EDD700531E26 /* Coordinators  */ = {
 			isa = PBXGroup;
 			children = (
+				62943B2D2859343A00531E26 /* Coordinator.swift */,
+				62943B2F2859345200531E26 /* MainCoordinator.swift */,
 			);
 			path = "Coordinators ";
 			sourceTree = "<group>";
@@ -507,11 +513,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				62943B2828591EDC00531E26 /* Theme.swift in Sources */,
+				62943B302859345200531E26 /* MainCoordinator.swift in Sources */,
 				62943B162858A1FF00531E26 /* NetworkService.swift in Sources */,
 				62943B1F2858EDBA00531E26 /* ProductListViewController.swift in Sources */,
 				62943B222858EFD900531E26 /* ProductCollectionViewCell.swift in Sources */,
 				62943B10285899C400531E26 /* Product.swift in Sources */,
 				62943ADF285898DA00531E26 /* AppDelegate.swift in Sources */,
+				62943B2E2859343A00531E26 /* Coordinator.swift in Sources */,
 				62943AE1285898DA00531E26 /* SceneDelegate.swift in Sources */,
 				62943B2B28591F5C00531E26 /* UIColorExtension.swift in Sources */,
 				62943B252858F2FC00531E26 /* ProductListViewModel.swift in Sources */,

@@ -11,6 +11,7 @@ import SDWebImage
 
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var coordinator: MainCoordinator?
     private var collectionView: UICollectionView!
     private var viewModel = ProductListViewModel()
     private var products = [Product]()
