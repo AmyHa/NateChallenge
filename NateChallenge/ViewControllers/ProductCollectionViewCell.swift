@@ -21,6 +21,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "house")
+        imageView.contentMode = .scaleAspectFit
         return imageView
     }()
     

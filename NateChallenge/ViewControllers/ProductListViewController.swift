@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import SDWebImage
 
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
@@ -34,6 +35,15 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as! ProductCollectionViewCell
+        
+        let image = products[indexPath.row].images.count > 0 ? products[indexPath.row].images[0] : ""
+        let imageURL = URL(string: image)
+
+        cell.imageView.sd_setImage(with: imageURL) { image, error, cacheType, downloadURL in
+            if let error = error {
+                print("Error downloading image: \(error)")
+            }
+        }
         cell.titleLabel.text = products[indexPath.row].title
         cell.merchantLabel.text = products[indexPath.row].merchant
         return cell
