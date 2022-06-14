@@ -9,9 +9,9 @@ import Foundation
 
 class NetworkService {
     
-    private let session: URLSession
+    private let session: URLSessionProtocol
     
-    init(session: URLSession = URLSession.shared) {
+    init(session: URLSessionProtocol = URLSession.shared) {
         self.session = session
     }
     
@@ -38,3 +38,11 @@ enum HttpMethods: String {
     case post = "POST"
     case get = "GET"
 }
+
+typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
+
+protocol URLSessionProtocol {
+    func dataTask(with request: URLRequest, completionHandler: @escaping DataTaskResult) -> URLSessionDataTask
+}
+
+extension URLSession: URLSessionProtocol {}

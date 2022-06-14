@@ -18,6 +18,7 @@
 		62943B1228589AFD00531E26 /* ProductsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B1128589AFD00531E26 /* ProductsTests.swift */; };
 		62943B162858A1FF00531E26 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B152858A1FF00531E26 /* NetworkService.swift */; };
 		62943B192858A23100531E26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B182858A23100531E26 /* Constants.swift */; };
+		62943B1C2858D9FE00531E26 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B1B2858D9FE00531E26 /* NetworkServiceTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		62943B1128589AFD00531E26 /* ProductsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTests.swift; sourceTree = "<group>"; };
 		62943B152858A1FF00531E26 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		62943B182858A23100531E26 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		62943B1B2858D9FE00531E26 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 		62943AF4285898DF00531E26 /* NateChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
+				62943B1A2858D9E000531E26 /* Service */,
 				62943B1328589B0100531E26 /* Models */,
 			);
 			path = NateChallengeTests;
@@ -163,6 +166,14 @@
 				62943B182858A23100531E26 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		62943B1A2858D9E000531E26 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				62943B1B2858D9FE00531E26 /* NetworkServiceTests.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62943B1C2858D9FE00531E26 /* NetworkServiceTests.swift in Sources */,
 				62943B1228589AFD00531E26 /* ProductsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
