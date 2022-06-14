@@ -5,11 +5,11 @@
 //  Created by Amy Ha on 14/06/2022.
 //
 
-struct Products {
+struct Products: Decodable {
     var products: [Product]
 }
 
-struct Product {
+struct Product: Decodable {
     var id: String
     var title: String
     var images: [String]
