@@ -12,12 +12,11 @@ class ProductCollectionViewCell: UICollectionViewCell {
     
     func heightForView(text:String, width:CGFloat) -> CGFloat{
        let label:UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
-       label.numberOfLines = 0
-       label.lineBreakMode = NSLineBreakMode.byWordWrapping
+       label.numberOfLines = 4
        label.text = text
        label.sizeToFit()
        return label.frame.height
-   }
+    }
     
     let imageView: UIImageView = {
         let imageView = UIImageView()
@@ -29,7 +28,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         let label = UILabel()
         label.text = "Product Title"
         label.textAlignment = .center
-        label.numberOfLines = 0
+        label.numberOfLines = 4
         label.textColor = .black
         return label
     }()
