@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		62943ADF285898DA00531E26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943ADE285898DA00531E26 /* AppDelegate.swift */; };
 		62943AE1285898DA00531E26 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943AE0285898DA00531E26 /* SceneDelegate.swift */; };
-		62943AE3285898DA00531E26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943AE2285898DA00531E26 /* ViewController.swift */; };
 		62943AE8285898DF00531E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62943AE7285898DF00531E26 /* Assets.xcassets */; };
 		62943AEB285898DF00531E26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62943AE9285898DF00531E26 /* LaunchScreen.storyboard */; };
 		62943B00285898DF00531E26 /* NateChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943AFF285898DF00531E26 /* NateChallengeUITests.swift */; };
@@ -19,6 +18,8 @@
 		62943B162858A1FF00531E26 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B152858A1FF00531E26 /* NetworkService.swift */; };
 		62943B192858A23100531E26 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B182858A23100531E26 /* Constants.swift */; };
 		62943B1C2858D9FE00531E26 /* NetworkServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B1B2858D9FE00531E26 /* NetworkServiceTests.swift */; };
+		62943B1F2858EDBA00531E26 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B1E2858EDBA00531E26 /* ProductListViewController.swift */; };
+		62943B222858EFD900531E26 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B212858EFD900531E26 /* ProductCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		62943ADB285898DA00531E26 /* NateChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62943ADE285898DA00531E26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62943AE0285898DA00531E26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		62943AE2285898DA00531E26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		62943AE7285898DF00531E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62943AEA285898DF00531E26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62943AEC285898DF00531E26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -55,6 +55,8 @@
 		62943B152858A1FF00531E26 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		62943B182858A23100531E26 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		62943B1B2858D9FE00531E26 /* NetworkServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceTests.swift; sourceTree = "<group>"; };
+		62943B1E2858EDBA00531E26 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		62943B212858EFD900531E26 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,12 +107,13 @@
 		62943ADD285898DA00531E26 /* NateChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				62943B202858EDD700531E26 /* Coordinators  */,
+				62943B1D2858EDA000531E26 /* ViewControllers */,
 				62943B172858A22300531E26 /* Helpers */,
 				62943B142858A1EE00531E26 /* Services */,
 				62943B0E285899AF00531E26 /* Models */,
 				62943ADE285898DA00531E26 /* AppDelegate.swift */,
 				62943AE0285898DA00531E26 /* SceneDelegate.swift */,
-				62943AE2285898DA00531E26 /* ViewController.swift */,
 				62943AE7285898DF00531E26 /* Assets.xcassets */,
 				62943AE9285898DF00531E26 /* LaunchScreen.storyboard */,
 				62943AEC285898DF00531E26 /* Info.plist */,
@@ -174,6 +177,22 @@
 				62943B1B2858D9FE00531E26 /* NetworkServiceTests.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		62943B1D2858EDA000531E26 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				62943B1E2858EDBA00531E26 /* ProductListViewController.swift */,
+				62943B212858EFD900531E26 /* ProductCollectionViewCell.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		62943B202858EDD700531E26 /* Coordinators  */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Coordinators ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +326,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				62943B162858A1FF00531E26 /* NetworkService.swift in Sources */,
-				62943AE3285898DA00531E26 /* ViewController.swift in Sources */,
+				62943B1F2858EDBA00531E26 /* ProductListViewController.swift in Sources */,
+				62943B222858EFD900531E26 /* ProductCollectionViewCell.swift in Sources */,
 				62943B10285899C400531E26 /* Product.swift in Sources */,
 				62943ADF285898DA00531E26 /* AppDelegate.swift in Sources */,
 				62943AE1285898DA00531E26 /* SceneDelegate.swift in Sources */,
