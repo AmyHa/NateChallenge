@@ -10,7 +10,8 @@ import UIKit
 class ProductListViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     private var collectionView: UICollectionView!
-    
+    private var viewModel = ProductListViewModel()
+
     override func viewDidLoad() {
         setUpCollectionView()
     }
