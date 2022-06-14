@@ -17,6 +17,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     private var viewModel = ProductListViewModel()
     private var products = [Product]()
     private var cancellables: Set<AnyCancellable> = []
+    private let refreshControl = UIRefreshControl()
 
     override func viewDidLoad() {
         setUpCountLabel()
@@ -31,6 +32,8 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
                 }
             })
             .store(in: &cancellables)
+        
+        refreshControl.addTarget(self, action: #selector(onRefreshCollectionView), for: .valueChanged)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -108,5 +111,10 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     func onTapProduct(product: Product) {
         coordinator?.moveToDetailViewController(of: product)
+    }
+    
+    @objc
+    func onRefreshCollectionView() {
+        viewModel.fetchProducts()
     }
 }
