@@ -22,6 +22,7 @@ class ProductCollectionViewCell: UICollectionViewCell {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "house")
         imageView.contentMode = .scaleAspectFit
+        imageView.clipsToBounds = true
         imageView.layer.cornerRadius = 15
         imageView.backgroundColor = Colours.primaryBackground
         return imageView
