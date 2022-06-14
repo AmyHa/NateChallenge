@@ -44,6 +44,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
                 print("Error downloading image: \(error)")
             }
         }
+        cell.imageView.layer.cornerRadius = 20
         cell.titleLabel.text = products[indexPath.row].title
         cell.merchantLabel.text = products[indexPath.row].merchant
         return cell

@@ -22,6 +22,8 @@
 		62943B1F2858EDBA00531E26 /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B1E2858EDBA00531E26 /* ProductListViewController.swift */; };
 		62943B222858EFD900531E26 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B212858EFD900531E26 /* ProductCollectionViewCell.swift */; };
 		62943B252858F2FC00531E26 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B242858F2FC00531E26 /* ProductListViewModel.swift */; };
+		62943B2828591EDC00531E26 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B2728591EDC00531E26 /* Theme.swift */; };
+		62943B2B28591F5C00531E26 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B2A28591F5C00531E26 /* UIColorExtension.swift */; };
 		71615FE1E5D4446082C70967 /* Pods_NateChallenge_NateChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */; };
 		BD56094AC540B98F6B7B5C06 /* Pods_NateChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		62943B1E2858EDBA00531E26 /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		62943B212858EFD900531E26 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
 		62943B242858F2FC00531E26 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
+		62943B2728591EDC00531E26 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		62943B2A28591F5C00531E26 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge_NateChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA5CEA28E9D88DB79542859 /* Pods-NateChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-NateChallengeTests/Pods-NateChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +125,6 @@
 				9BA5CEA28E9D88DB79542859 /* Pods-NateChallengeTests.debug.xcconfig */,
 				36C8E0EC6A1BB7309EF8FD23 /* Pods-NateChallengeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -156,6 +159,7 @@
 				62943B202858EDD700531E26 /* Coordinators  */,
 				62943B172858A22300531E26 /* Helpers */,
 				62943B142858A1EE00531E26 /* Services */,
+				62943B2628591EAB00531E26 /* Style */,
 				62943ADE285898DA00531E26 /* AppDelegate.swift */,
 				62943AE0285898DA00531E26 /* SceneDelegate.swift */,
 				62943AE7285898DF00531E26 /* Assets.xcassets */,
@@ -210,6 +214,7 @@
 		62943B172858A22300531E26 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				62943B2928591F4600531E26 /* Extensions */,
 				62943B182858A23100531E26 /* Constants.swift */,
 			);
 			path = Helpers;
@@ -245,6 +250,22 @@
 				62943B242858F2FC00531E26 /* ProductListViewModel.swift */,
 			);
 			path = "ViewModels ";
+			sourceTree = "<group>";
+		};
+		62943B2628591EAB00531E26 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				62943B2728591EDC00531E26 /* Theme.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		62943B2928591F4600531E26 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62943B2A28591F5C00531E26 /* UIColorExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,12 +506,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62943B2828591EDC00531E26 /* Theme.swift in Sources */,
 				62943B162858A1FF00531E26 /* NetworkService.swift in Sources */,
 				62943B1F2858EDBA00531E26 /* ProductListViewController.swift in Sources */,
 				62943B222858EFD900531E26 /* ProductCollectionViewCell.swift in Sources */,
 				62943B10285899C400531E26 /* Product.swift in Sources */,
 				62943ADF285898DA00531E26 /* AppDelegate.swift in Sources */,
 				62943AE1285898DA00531E26 /* SceneDelegate.swift in Sources */,
+				62943B2B28591F5C00531E26 /* UIColorExtension.swift in Sources */,
 				62943B252858F2FC00531E26 /* ProductListViewModel.swift in Sources */,
 				62943B192858A23100531E26 /* Constants.swift in Sources */,
 			);
