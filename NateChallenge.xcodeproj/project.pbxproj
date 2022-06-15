@@ -31,6 +31,7 @@
 		62943B3728593ECD00531E26 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943B3628593ECD00531E26 /* Outfit-SemiBold.ttf */; };
 		62943B3928593ED600531E26 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943B3828593ED600531E26 /* Outfit-Regular.ttf */; };
 		62943B3E285A5BB100531E26 /* ProductListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B3D285A5BB100531E26 /* ProductListViewModelTests.swift */; };
+		62943B40285A99F400531E26 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B3F285A99F400531E26 /* UIButtonExtension.swift */; };
 		71615FE1E5D4446082C70967 /* Pods_NateChallenge_NateChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */; };
 		BD56094AC540B98F6B7B5C06 /* Pods_NateChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */; };
 /* End PBXBuildFile section */
@@ -85,6 +86,7 @@
 		62943B3628593ECD00531E26 /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
 		62943B3828593ED600531E26 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Regular.ttf"; sourceTree = "<group>"; };
 		62943B3D285A5BB100531E26 /* ProductListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelTests.swift; sourceTree = "<group>"; };
+		62943B3F285A99F400531E26 /* UIButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
 		76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge_NateChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA5CEA28E9D88DB79542859 /* Pods-NateChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-NateChallengeTests/Pods-NateChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				62943B2A28591F5C00531E26 /* UIColorExtension.swift */,
+				62943B3F285A99F400531E26 /* UIButtonExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -557,6 +560,7 @@
 				62943B2E2859343A00531E26 /* Coordinator.swift in Sources */,
 				62943AE1285898DA00531E26 /* SceneDelegate.swift in Sources */,
 				62943B2B28591F5C00531E26 /* UIColorExtension.swift in Sources */,
+				62943B40285A99F400531E26 /* UIButtonExtension.swift in Sources */,
 				62943B252858F2FC00531E26 /* ProductListViewModel.swift in Sources */,
 				62943B192858A23100531E26 /* Constants.swift in Sources */,
 			);
