@@ -43,6 +43,10 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as! ProductCollectionViewCell
 
+        if let defaultImage = UIImage(named: "imageComingSoon") {
+            cell.imageView.image = defaultImage
+        }
+        
         if products[indexPath.row].images.count > 0 {
             let imageURL = URL(string: products[indexPath.row].images[0])
             cell.imageView.sd_setImage(with: imageURL) { image, error, cacheType, downloadURL in
