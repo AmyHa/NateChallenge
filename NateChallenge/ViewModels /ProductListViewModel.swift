@@ -7,7 +7,7 @@
 import Combine
 
 class ProductListViewModel {
-    var service = NetworkService()
+    var service: NetworkServiceProtocol = NetworkService()
     @Published private(set) var products = [Product]()
     
     init() {
@@ -24,6 +24,12 @@ class ProductListViewModel {
             case .failure(let failureValue):
                 print("failure! \(failureValue)")
             }
+        }
+    }
+    
+    func remove(_ product: Product) {
+        if let index = products.firstIndex(of: product) {
+            products.remove(at: index)
         }
     }
 }

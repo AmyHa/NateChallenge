@@ -30,6 +30,7 @@
 		62943B3528593EC700531E26 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943B3428593EC700531E26 /* Outfit-Bold.ttf */; };
 		62943B3728593ECD00531E26 /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943B3628593ECD00531E26 /* Outfit-SemiBold.ttf */; };
 		62943B3928593ED600531E26 /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 62943B3828593ED600531E26 /* Outfit-Regular.ttf */; };
+		62943B3E285A5BB100531E26 /* ProductListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62943B3D285A5BB100531E26 /* ProductListViewModelTests.swift */; };
 		71615FE1E5D4446082C70967 /* Pods_NateChallenge_NateChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */; };
 		BD56094AC540B98F6B7B5C06 /* Pods_NateChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */; };
 /* End PBXBuildFile section */
@@ -83,6 +84,7 @@
 		62943B3428593EC700531E26 /* Outfit-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Bold.ttf"; sourceTree = "<group>"; };
 		62943B3628593ECD00531E26 /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
 		62943B3828593ED600531E26 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Outfit-Regular.ttf"; sourceTree = "<group>"; };
+		62943B3D285A5BB100531E26 /* ProductListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModelTests.swift; sourceTree = "<group>"; };
 		76ED5A6382597C3EFDC369F4 /* Pods_NateChallenge_NateChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge_NateChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BA5CEA28E9D88DB79542859 /* Pods-NateChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-NateChallengeTests/Pods-NateChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A78A4323856B2B602622BE93 /* Pods_NateChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NateChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,8 +186,9 @@
 		62943AF4285898DF00531E26 /* NateChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				62943B1A2858D9E000531E26 /* Service */,
 				62943B1328589B0100531E26 /* Models */,
+				62943B3A285A5B7500531E26 /* ViewModels */,
+				62943B1A2858D9E000531E26 /* Service */,
 			);
 			path = NateChallengeTests;
 			sourceTree = "<group>";
@@ -292,6 +295,14 @@
 				62943B3428593EC700531E26 /* Outfit-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		62943B3A285A5B7500531E26 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				62943B3D285A5BB100531E26 /* ProductListViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -557,6 +568,7 @@
 			files = (
 				62943B1C2858D9FE00531E26 /* NetworkServiceTests.swift in Sources */,
 				62943B1228589AFD00531E26 /* ProductsTests.swift in Sources */,
+				62943B3E285A5BB100531E26 /* ProductListViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

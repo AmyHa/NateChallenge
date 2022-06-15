@@ -9,7 +9,7 @@ struct Products: Decodable {
     var products: [Product]
 }
 
-struct Product: Decodable {
+struct Product: Decodable, Equatable {
     var id: String
     var title: String
     var images: [String]

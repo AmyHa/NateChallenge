@@ -46,3 +46,9 @@ protocol URLSessionProtocol {
 }
 
 extension URLSession: URLSessionProtocol {}
+
+protocol NetworkServiceProtocol {
+    func fetchData<T:Decodable>(with urlString: String, completion: @escaping (Result<T,Error>) -> Void)
+}
+
+extension NetworkService: NetworkServiceProtocol {}
