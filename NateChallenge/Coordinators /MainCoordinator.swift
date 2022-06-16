@@ -22,9 +22,8 @@ class MainCoordinator: Coordinator {
         navigationController.pushViewController(productListViewController, animated: false)
     }
     
-    func moveToDetailViewController(of product: Product) {
-        let detailViewController = DetailViewController()
+    func moveToDetailViewController(with viewModel: ProductListViewModel, of product: Product) {
+        let detailViewController = DetailViewController(viewModel: viewModel, with: product)
         navigationController.present(detailViewController, animated: true)
-        
     }
 }
