@@ -42,21 +42,15 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ProductCollectionViewCell.identifier, for: indexPath) as! ProductCollectionViewCell
-
-        if let defaultImage = UIImage(named: "imageComingSoon") {
-            cell.imageView.image = defaultImage
-        }
         
-        if products[indexPath.row].images.count > 0 {
-            let imageURL = URL(string: products[indexPath.row].images[0])
-            cell.imageView.sd_setImage(with: imageURL) { image, error, cacheType, downloadURL in
+        if let url = products[indexPath.row].images.first {
+            cell.imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "imageComingSoon")) { _, error, _, _ in
                 if let error = error {
                     print("Error downloading image: \(error)")
-                    if let defaultImage = UIImage(named: "imageComingSoon") {
-                        cell.imageView.image = defaultImage
-                    }
                 }
             }
+        } else {
+            cell.imageView.image = UIImage(named: "imageComingSoon")
         }
         
         cell.imageView.layer.cornerRadius = 20
