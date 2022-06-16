@@ -50,7 +50,7 @@ class DetailViewController: UIViewController {
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
             imageView.heightAnchor.constraint(equalToConstant: view.frame.size.height / 2)
         ])
-        imageView.contentMode = .scaleAspectFit
+         imageView.contentMode = .scaleAspectFit
         
         if let url = product?.images.first {
             imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "imageComingSoon")) { _, error, _, _ in
@@ -71,7 +71,7 @@ class DetailViewController: UIViewController {
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20)
         ])
-        titleLabel.text = product?.title
+        titleLabel.text = product?.title.uppercased()
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
     }
@@ -84,7 +84,8 @@ class DetailViewController: UIViewController {
             merchantLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
             merchantLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20)
         ])
-        merchantLabel.text = product?.merchant
+        merchantLabel.text = product?.merchant.lowercased()
+        merchantLabel.textColor = .gray
         merchantLabel.numberOfLines = 0
         merchantLabel.textAlignment = .center
     }
