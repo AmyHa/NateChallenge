@@ -6,19 +6,87 @@
 //
 
 import UIKit
+import SDWebImage
 
 class DetailViewController: UIViewController {
  
     var removeButton = UIButton()
     var addToCartButton = UIButton()
+    var merchantLabel = UILabel()
+    var titleLabel = UILabel()
+    var imageView = UIImageView()
+    
+    var viewModel: ProductListViewModel?
+    var product: Product?
+    
+    init(viewModel: ProductListViewModel, with product: Product) {
+        self.viewModel = viewModel
+        self.product = product
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .white
         
+        setUpImageView()
+        setUpTitleLabel()
+        setUpMerchantLabel()
         setUpRemoveButton()
         setUpAddToCartButton()
+    }
+    
+    private func setUpImageView() {
+        view.addSubview(imageView)
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            imageView.heightAnchor.constraint(equalToConstant: view.frame.size.height / 2)
+        ])
+        imageView.contentMode = .scaleAspectFit
+        
+        if let url = product?.images.first {
+            imageView.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: "imageComingSoon")) { _, error, _, _ in
+                if let error = error {
+                    print("Error downloading image: \(error)")
+                }
+            }
+        } else {            
+            imageView.image = UIImage(named: "imageComingSoon")
+        }
+    }
+    
+    private func setUpTitleLabel() {
+        view.addSubview(titleLabel)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 20)
+        ])
+        titleLabel.text = product?.title
+        titleLabel.numberOfLines = 0
+        titleLabel.textAlignment = .center
+    }
+    
+    private func setUpMerchantLabel() {
+        view.addSubview(merchantLabel)
+        merchantLabel.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            merchantLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            merchantLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            merchantLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 20)
+        ])
+        merchantLabel.text = product?.merchant
+        merchantLabel.numberOfLines = 0
+        merchantLabel.textAlignment = .center
     }
     
     private func setUpRemoveButton() {

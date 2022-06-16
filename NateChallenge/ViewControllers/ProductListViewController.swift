@@ -114,7 +114,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     func onTapProduct(product: Product) {
-        coordinator?.moveToDetailViewController(of: product)
+        coordinator?.moveToDetailViewController(with: viewModel, of: product)
     }
     
     @objc
