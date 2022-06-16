@@ -39,6 +39,9 @@ class DetailViewController: UIViewController {
         setUpMerchantLabel()
         setUpRemoveButton()
         setUpAddToCartButton()
+        
+        removeButton.addTarget(self, action: #selector(onTapRemoveButton), for: .touchUpInside)
+        removeButton.addTarget(self, action: #selector(onTouchDownRemoveButton), for: .touchDown)
     }
     
     private func setUpImageView() {
@@ -118,5 +121,18 @@ class DetailViewController: UIViewController {
         addToCartButton.titleLabelFont = UIFont(name: "Outfit-SemiBold", size: 15)
         addToCartButton.setTitleColor(.white, for: .normal)
         addToCartButton.backgroundColor = .black
+    }
+    
+    @objc
+    private func onTapRemoveButton() {
+        if let product = product {
+            viewModel?.remove(product)
+        }
+        dismiss(animated: true)
+    }
+    
+    @objc
+    private func onTouchDownRemoveButton() {
+        removeButton.backgroundColor = .gray
     }
 }
