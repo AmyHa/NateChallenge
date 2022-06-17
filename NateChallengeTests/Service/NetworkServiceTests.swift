@@ -21,7 +21,7 @@ class NetworkServiceTests: XCTestCase {
 
     func test_fetchData_shouldRequestCorrectURL() throws {
         let url = Constants.Service.baseURL
-        service.fetchData(with: url) { (result: Result<Products, Error>) in
+        service.fetchData(with: url, itemsToLoad: 4) { (result: Result<Products, Error>) in
             
         }
         let expectedURL = URL(string: url)

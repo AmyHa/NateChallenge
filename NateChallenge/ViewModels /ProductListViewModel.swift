@@ -7,15 +7,22 @@
 import Combine
 
 class ProductListViewModel {
+    
     var service: NetworkServiceProtocol = NetworkService()
+    private var currentPage = 1
     @Published private(set) var products = [Product]()
     
     init() {
         fetchProducts()
     }
     
+    var itemsToLoad: Int {
+        // We have a max of 4 products per page
+        return currentPage*4
+    }
+    
     func fetchProducts() {
-        service.fetchData(with: Constants.Service.baseURL) { [weak self] (result: Result<Products, Error>) in
+        service.fetchData(with: Constants.Service.baseURL, itemsToLoad: itemsToLoad) { [weak self] (result: Result<Products, Error>) in
             
             switch result {
             case .success(let successValue):

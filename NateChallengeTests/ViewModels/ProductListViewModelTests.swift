@@ -39,13 +39,20 @@ class ProductListViewModelTests: XCTestCase {
         
         XCTAssertEqual(expectedCount, returnedCount)
     }
+    
+    func test_numberOfItemsToLoad_shouldReturnCorrectNumberOfItemsOnFirstPage() {
+        let expectedNumber = 4
+        let returnedNumber = viewModel.itemsToLoad
+        
+        XCTAssertEqual(expectedNumber, returnedNumber)
+    }
 }
 
 // MARK: Mocks classes for testing
 
 class MockNetworkService: NetworkServiceProtocol {
     
-    func fetchData<T>(with urlString: String, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
+    func fetchData<T>(with urlString: String, itemsToLoad: Int, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
         let firstProduct = Product(id: "1", title: "Test shoes", images: [""], merchant: "A&F")
         let secondProduct = Product(id: "2", title: "Test shirt", images: [""], merchant: "Gap")
         let products = Products(products: [firstProduct, secondProduct])
