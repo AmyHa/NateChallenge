@@ -15,13 +15,13 @@ class NetworkService {
         self.session = session
     }
     
-    func fetchData<T:Decodable>(with urlString: String, itemsToSkip: Int, itemsToLoad: Int, completion: @escaping (Result<T,Error>) -> Void) {
+    func fetchData<T:Decodable>(with urlString: String, itemsToLoad: Int, completion: @escaping (Result<T,Error>) -> Void) {
         
         guard let url = URL(string: urlString) else { return }
         var request = URLRequest(url: url)
         request.httpMethod = HttpMethods.post.rawValue
         //Request Body
-        let json: [String: Any] = ["skip": itemsToSkip, "take": itemsToLoad]
+        let json: [String: Any] = ["take": itemsToLoad]
          
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
 
@@ -57,7 +57,7 @@ protocol URLSessionProtocol {
 extension URLSession: URLSessionProtocol {}
 
 protocol NetworkServiceProtocol {
-    func fetchData<T:Decodable>(with urlString: String, itemsToSkip: Int, itemsToLoad: Int, completion: @escaping (Result<T,Error>) -> Void)
+    func fetchData<T:Decodable>(with urlString: String, itemsToLoad: Int, completion: @escaping (Result<T,Error>) -> Void)
 }
 
 extension NetworkService: NetworkServiceProtocol {}

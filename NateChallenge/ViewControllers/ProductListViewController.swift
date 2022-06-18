@@ -116,3 +116,13 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         viewModel.fetchProducts()
     }
 }
+
+extension ProductListViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        guard !viewModel.isPaginating else { return }
+        let position = scrollView.contentOffset.y
+        if position > (collectionView.contentSize.height-100-scrollView.frame.size.height) {
+            self.viewModel.loadNextPage()
+        }
+    }
+}

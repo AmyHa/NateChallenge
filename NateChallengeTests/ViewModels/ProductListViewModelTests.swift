@@ -52,7 +52,7 @@ class ProductListViewModelTests: XCTestCase {
 
 class MockNetworkService: NetworkServiceProtocol {
     
-    func fetchData<T>(with urlString: String, itemsToSkip: Int, itemsToLoad: Int, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
+    func fetchData<T>(with urlString: String, itemsToLoad: Int, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
         let firstProduct = Product(id: "1", title: "Test shoes", images: [""], merchant: "A&F")
         let secondProduct = Product(id: "2", title: "Test shirt", images: [""], merchant: "Gap")
         let products = Products(products: [firstProduct, secondProduct])
