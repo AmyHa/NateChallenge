@@ -8,6 +8,7 @@
 struct Constants {
     
     struct Service {
-        static let baseURL = "http://localhost:3000/products"
+        static let baseURL = "http://localhost:3000/products/"
+        static let offsetURL = "\(baseURL)offset/"
     }
 }

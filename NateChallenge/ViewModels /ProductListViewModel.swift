@@ -21,8 +21,12 @@ class ProductListViewModel {
         return currentPage*4
     }
     
+    var itemsToSkip: Int {
+        return (currentPage-1)*4
+    }
+    
     func fetchProducts() {
-        service.fetchData(with: Constants.Service.baseURL, itemsToLoad: itemsToLoad) { [weak self] (result: Result<Products, Error>) in
+        service.fetchData(with: Constants.Service.offsetURL, itemsToSkip: itemsToSkip, itemsToLoad: itemsToLoad) { [weak self] (result: Result<Products, Error>) in
             
             switch result {
             case .success(let successValue):
