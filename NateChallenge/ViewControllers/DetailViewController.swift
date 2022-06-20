@@ -101,7 +101,7 @@ class DetailViewController: UIViewController {
         NSLayoutConstraint.activate([
             removeButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             removeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            removeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -10)
+            removeButton.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30)
         ])
         
         removeButton.setTitle("I've seen it already!", for: .normal)
