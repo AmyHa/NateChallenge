@@ -91,6 +91,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
         ])
+        collectionView.refreshControl = refreshControl
     }
     
     private func setUpCountLabel() {
@@ -114,6 +115,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
     @objc
     func onRefreshCollectionView() {
         viewModel.fetchProducts()
+        self.refreshControl.endRefreshing()
     }
 }
 
