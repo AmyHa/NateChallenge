@@ -25,7 +25,6 @@ class ProductListViewModelTests: XCTestCase {
         viewModel.fetchProducts()
         
         let firstProduct = Product(id: "1", title: "Test shoes", images: [""], url: "", merchant: "A&F")
-        let secondProduct = Product(id: "2", title: "Test shirt", images: [""], url: "", merchant: "Gap")
                 
         var expectedCount = 2
         var returnedCount = viewModel.products.count
