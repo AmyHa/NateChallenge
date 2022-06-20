@@ -24,8 +24,8 @@ class ProductListViewModelTests: XCTestCase {
         viewModel.service = MockNetworkService()
         viewModel.fetchProducts()
         
-        let firstProduct = Product(id: "1", title: "Test shoes", images: [""], merchant: "A&F")
-        let secondProduct = Product(id: "2", title: "Test shirt", images: [""], merchant: "Gap")
+        let firstProduct = Product(id: "1", title: "Test shoes", images: [""], url: "", merchant: "A&F")
+        let secondProduct = Product(id: "2", title: "Test shirt", images: [""], url: "", merchant: "Gap")
                 
         var expectedCount = 2
         var returnedCount = viewModel.products.count
@@ -53,8 +53,8 @@ class ProductListViewModelTests: XCTestCase {
 class MockNetworkService: NetworkServiceProtocol {
     
     func fetchData<T>(with urlString: String, itemsToLoad: Int, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
-        let firstProduct = Product(id: "1", title: "Test shoes", images: [""], merchant: "A&F")
-        let secondProduct = Product(id: "2", title: "Test shirt", images: [""], merchant: "Gap")
+        let firstProduct = Product(id: "1", title: "Test shoes", images: [""], url: "", merchant: "A&F")
+        let secondProduct = Product(id: "2", title: "Test shirt", images: [""], url: "", merchant: "Gap")
         let products = Products(products: [firstProduct, secondProduct])
         completion(Result{products as! T})
     }
