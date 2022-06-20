@@ -106,6 +106,7 @@ class ProductListViewController: UIViewController, UICollectionViewDataSource, U
         countLabel.textAlignment = .center
         countLabel.backgroundColor = .white
         countLabel.textColor = .black
+        countLabel.accessibilityLabel = "Items"
     }
     
     func onTapProduct(product: Product) {
