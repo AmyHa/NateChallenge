@@ -59,6 +59,7 @@
 		36C8E0EC6A1BB7309EF8FD23 /* Pods-NateChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-NateChallengeTests/Pods-NateChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		5159BFAD7E736F3DB3196635 /* Pods-NateChallenge-NateChallengeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallenge-NateChallengeUITests.release.xcconfig"; path = "Target Support Files/Pods-NateChallenge-NateChallengeUITests/Pods-NateChallenge-NateChallengeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5C54DE21D6646A7F054AF230 /* Pods-NateChallenge-NateChallengeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NateChallenge-NateChallengeUITests.debug.xcconfig"; path = "Target Support Files/Pods-NateChallenge-NateChallengeUITests/Pods-NateChallenge-NateChallengeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6224361628606D86001744F2 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		62943ADB285898DA00531E26 /* NateChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NateChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62943ADE285898DA00531E26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62943AE0285898DA00531E26 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 		62943AD2285898DA00531E26 = {
 			isa = PBXGroup;
 			children = (
+				6224361628606D86001744F2 /* README.md */,
 				62943ADD285898DA00531E26 /* NateChallenge */,
 				62943AF4285898DF00531E26 /* NateChallengeTests */,
 				62943AFE285898DF00531E26 /* NateChallengeUITests */,
