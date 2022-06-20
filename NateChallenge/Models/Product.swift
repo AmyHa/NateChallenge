@@ -13,5 +13,6 @@ struct Product: Decodable, Equatable {
     var id: String
     var title: String
     var images: [String]
+    var url: String
     var merchant: String
 }

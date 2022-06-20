@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
  
     var removeButton = UIButton()
     var addToCartButton = UIButton()
+    var linkButton = UIButton()
     var merchantLabel = UILabel()
     var titleLabel = UILabel()
     var imageView = UIImageView()
@@ -39,6 +40,7 @@ class DetailViewController: UIViewController {
         setUpMerchantLabel()
         setUpRemoveButton()
         setUpAddToCartButton()
+        setUpLinkButton()
         
         removeButton.addTarget(self, action: #selector(onTapRemoveButton), for: .touchUpInside)
         removeButton.addTarget(self, action: #selector(onTouchDownRemoveButton), for: .touchDown)
@@ -123,6 +125,20 @@ class DetailViewController: UIViewController {
         addToCartButton.backgroundColor = .black
     }
     
+    private func setUpLinkButton() {
+        view.addSubview(linkButton)
+        linkButton.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            linkButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            linkButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            linkButton.topAnchor.constraint(equalTo: merchantLabel.bottomAnchor, constant: 10),
+            linkButton.heightAnchor.constraint(equalTo: addToCartButton.heightAnchor, multiplier: 1)
+        ])
+        linkButton.setImage(UIImage(systemName: "link")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        linkButton.tintColor = .darkGray
+        linkButton.addTarget(self, action: #selector(onTapLinkButton), for: .touchUpInside)
+    }
+    
     @objc
     private func onTapRemoveButton() {
         if let product = product {
@@ -134,5 +150,14 @@ class DetailViewController: UIViewController {
     @objc
     private func onTouchDownRemoveButton() {
         removeButton.backgroundColor = .gray
+    }
+    
+    @objc
+    private func onTapLinkButton() {
+        if let url = product?.url {
+            if let link = URL(string: url) {
+                UIApplication.shared.open(link)
+            }
+        }
     }
 }
