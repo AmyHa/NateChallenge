@@ -105,7 +105,7 @@ class DetailViewController: UIViewController {
         ])
         
         removeButton.setTitle("I've seen it already!", for: .normal)
-        removeButton.titleLabelFont = UIFont(name: "Outfit-SemiBold", size: 15)
+        removeButton.titleLabel?.font = UIFont.outfitSemiBold()
         removeButton.setTitleColor(.white, for: .normal)
         removeButton.backgroundColor = .black
     }
@@ -120,7 +120,7 @@ class DetailViewController: UIViewController {
         ])
         
         addToCartButton.setTitle("ADD TO CART", for: .normal)
-        addToCartButton.titleLabelFont = UIFont(name: "Outfit-SemiBold", size: 15)
+        addToCartButton.titleLabel?.font = UIFont.outfitSemiBold()
         addToCartButton.setTitleColor(.white, for: .normal)
         addToCartButton.backgroundColor = .black
     }
