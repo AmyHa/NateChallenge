@@ -43,11 +43,6 @@ class NetworkService {
     }
 }
 
-enum HttpMethods: String {
-    case post = "POST"
-    case get = "GET"
-}
-
 typealias DataTaskResult = (Data?, URLResponse?, Error?) -> Void
 
 protocol URLSessionProtocol {
