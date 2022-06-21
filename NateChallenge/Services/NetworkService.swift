@@ -25,10 +25,8 @@ class NetworkService {
          
         let jsonData = try? JSONSerialization.data(withJSONObject: json)
 
-        request.httpMethod = "POST"
         request.httpBody = jsonData
         request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
-
         
         session.dataTask(with: request) { data, _, error in
             
